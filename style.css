@@ -1,0 +1,137 @@
+/* Summer color palette */
+:root {
+  --sunny-yellow: #FFD54F;
+  --ocean-blue: #4FC3F7;
+  --coral: #FF8A65;
+  --sand: #FFF8E1;
+  --dark: #333;
+}
+
+/* General */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--sand);
+  color: var(--dark);
+}
+
+header {
+  background: var(--ocean-blue);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--sunny-yellow);
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Catalog */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  background: white;
+  border: 2px solid var(--coral);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.buyBtn {
+  background: var(--sunny-yellow);
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.buyBtn:hover {
+  background: var(--coral);
+  color: white;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: auto;
+}
+
+form input, form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--ocean-blue);
+}
+
+form button {
+  background: var(--ocean-blue);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--coral);
+}
+
+/* Footer */
+footer {
+  background: var(--ocean-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
